@@ -1,142 +1,73 @@
-/* General body styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #2e3b2e;
-    color: #333;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #355E3B;
+  margin: 0;
+  padding: 0;
 }
 
-/* Container for the quiz */
-.quiz-container {
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    width: 60%;
-    padding: 20px;
-    margin-top: 30px;
-    text-align: left;
+#quiz-container {
+  background-color: white; /* White background for quiz area */
+  color: black;
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Header styling */
-h1 {
-    font-size: 2.5rem;
-    color: #2e3b2e;
-    margin-bottom: 20px;
-    font-weight: 600;
+h1, h2 {
+  color: #355E3B; /* Dark green color for title and question heading */
 }
 
-/* Styling for the quiz questions and answers */
-.slide {
-    display: none;
-    padding-bottom: 20px;
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
 
-/* Ensure the image container scales proportionally */
-.image {
-    text-align: left;
-    margin-bottom: 20px;
+button {
+  border: none;
+  padding: 10px 20px;
+  margin: 10px 5px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-/* Image styling */
-.image img {
-    max-width: 100%;  /* Ensures the image does not overflow the container */
-    height: auto;     /* Maintains the aspect ratio */
-    display: block;   /* Prevents extra space under the image */
-    border-radius: 8px; /* Adds rounded corners for aesthetics */
-    object-fit: contain; /* Ensures the whole image fits inside the box */
-    max-height: 300px; /* Limits the image height to keep it reasonable */
+button:hover {
+  background-color: #4d4d4d; /* Darker green on hover */
 }
 
-
-
-.active-slide {
-    display: block;
+button.correct {
+  background-color: #00cc00; /* Green for correct answers */
 }
 
-/* Style for the question and answers */
-.question {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-    font-weight: bold;
+button.incorrect {
+  background-color: #cc0000; /* Red for incorrect answers */
 }
 
-.answers label {
-    display: block;
-    font-size: 1rem;
-    margin: 10px 0;
-    cursor: pointer;
+#results {
+  margin-top: 20px;
+  font-size: 1.2em;
 }
 
-.answers input {
-    margin-right: 10px;
+.option {
+  display: block; /* Each option on a separate line */
+  color: black; /* Black text for response options */
+  margin: 5px 0;
 }
 
-.correct {
-    background-color: #c8e6c9;
-}
-
-.incorrect {
-    background-color: #ffcdd2;
-}
-
-.score-display {
-    font-size: 1rem;
-    margin-top: 20px;
-    font-weight: bold;
-    color: #333;
-}
-
-/* Button styling */
-.buttons button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    margin: 10px 5px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.buttons button:hover {
-    background-color: #45a049;
-}
-
+/* Separate styles for Previous, Next, and Submit buttons */
 #previous {
-    background-color: #007BFF;
-}
-
-#previous:hover {
-    background-color: #0056b3;
-}
-
-#submit {
-    background-color: #f44336;
-}
-
-#submit:hover {
-    background-color: #d32f2f;
-}
-
-/* Hide the buttons initially */
-#submit, #previous {
-    display: none;
+  background-color: #355E3B; /* Hunter Green */
+  color: white;
 }
 
 #next {
-    display: inline-block;
+  background-color: #4d4d4d; /* Slightly dark grey */
+  color: white;
 }
 
-/* Result container */
-#results {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #333;
-    margin-top: 30px;
+#submit {
+  background-color: #004d00; /* Dark green */
+  color: white;
 }
